@@ -16,6 +16,20 @@ const SignUp = () => {
         createUser(email, password)
         .then(result => {
             console.log(result.user);
+            const newUser = {email: result.user.email};
+            // console.log('this is the new user on firebase: ', userEmail);
+            // send the email to database through server
+            fetch(`http://localhost:5000/users`, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(newUser)
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
         })
         .catch(error => {
             console.error(error);
