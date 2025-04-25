@@ -30,6 +30,13 @@ const Users = () => {
                             text: "The user has been deleted.",
                             icon: "success"
                         });
+
+                        // fetch the users again and show
+                        fetch(`http://localhost:5000/users`)
+                        .then(res => res.json())
+                        .then(data => {
+                            setUsers(data);
+                        })
                     }
                 })
             }
