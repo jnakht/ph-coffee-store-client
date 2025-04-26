@@ -18,7 +18,7 @@ const Users = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://coffee-store-server-gjqddzina-md-jisan-mias-projects.vercel.app/users/${_id}`, {
+                fetch(`https://ph-coffee-store-server.onrender.com/users/${_id}`, {
                     method: 'DELETE'
                 })
                 .then(res => res.json())
@@ -32,7 +32,7 @@ const Users = () => {
                         });
 
                         // fetch the users again and show
-                        fetch(`https://coffee-store-server-gjqddzina-md-jisan-mias-projects.vercel.app/users`)
+                        fetch(`https://ph-coffee-store-server.onrender.com/users`)
                         .then(res => res.json())
                         .then(data => {
                             setUsers(data);

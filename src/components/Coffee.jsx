@@ -18,7 +18,7 @@ const Coffee = ({ coffee, loadedCoffees, setLoadedCoffees }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://coffee-store-server-gjqddzina-md-jisan-mias-projects.vercel.app/coffee/${_id}`, {
+                fetch(`https://ph-coffee-store-server.onrender.com/coffee/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

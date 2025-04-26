@@ -21,7 +21,7 @@ const SignIn = () => {
             }
 
             // update the last logged in time
-            fetch(`https://coffee-store-server-gjqddzina-md-jisan-mias-projects.vercel.app/users`, {
+            fetch(`https://ph-coffee-store-server.onrender.com/users`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json'

@@ -22,7 +22,7 @@ const SignUp = () => {
             };
             // console.log('this is the new user on firebase: ', userEmail);
             // send the email to database through server
-            fetch(`https://coffee-store-server-gjqddzina-md-jisan-mias-projects.vercel.app/users`, {
+            fetch(`https://ph-coffee-store-server.onrender.com/users`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

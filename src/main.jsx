@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('https://coffee-store-server-gjqddzina-md-jisan-mias-projects.vercel.app/coffee')
+        loader: () => fetch('https://ph-coffee-store-server.onrender.com/coffee')
       },
       {
         path: 'addCoffee',
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
         path: 'updateCoffee/:id',
         element: <UpdateCoffee></UpdateCoffee>,
-        loader: ({ params }) => fetch(`https://coffee-store-server-gjqddzina-md-jisan-mias-projects.vercel.app/coffee/${params.id}`)
+        loader: ({ params }) => fetch(`https://ph-coffee-store-server.onrender.com/coffee/${params.id}`)
       },
       {
         path: '/login',
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       {
         path: '/users',
         element: <Users></Users>,
-        loader: () => fetch(`https://coffee-store-server-gjqddzina-md-jisan-mias-projects.vercel.app/users`)
+        loader: () => fetch(`https://ph-coffee-store-server.onrender.com/users`)
       }
     ]
   },
